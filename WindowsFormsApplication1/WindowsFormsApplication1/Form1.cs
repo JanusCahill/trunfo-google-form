@@ -12,7 +12,7 @@ using System.Media;
 
 /*
  * Laís Lyra Hatencia, 180471
- * Ingrid Mariana Inácio Jesus, 180779
+ * Ingrid Mariana de Jesus Inácio, 180779
  * 
  * Programa que imita o jogo de cartas Trunfo, com tema dinossauros
  * 
