@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 
 /*
  * Laís Lyra Hatencia, 180471
- * Ingrid Mariana Inácio Jesus, 
+ * Ingrid Mariana Inácio Jesus, 180779
  * 
- * 
- * O que falta fazer: Mostrar feedback sonoro, esconder a carta do oponente depois de certo tempo mostrando
+ * Programa que imita o jogo de cartas Trunfo, com tema dinossauros
  * 
 */
 
@@ -26,6 +26,7 @@ namespace WindowsFormsApplication1
         static int qntCartasOponente = 4;
         Carta[] cartasJogador = new Carta[8];
         Carta[] cartasOponente = new Carta[8];
+        SoundPlayer som = new SoundPlayer();
 
         public Form1()
         {
@@ -120,6 +121,8 @@ namespace WindowsFormsApplication1
                     cartasJogador[qntCartas - 1] = cartasOponente[0];
                     PassaParaTras(cartasOponente, qntCartasOponente, 0);
                     qntCartasOponente--;
+                    som.SoundLocation = "Certo.wav";
+                    som.Play();
                 }
                 else if (ganhou == -1)
                 {
@@ -128,6 +131,8 @@ namespace WindowsFormsApplication1
                     cartasOponente[qntCartasOponente - 1] = cartasJogador[0];
                     PassaParaTras(cartasJogador, qntCartas, 0);
                     qntCartas--;
+                    som.SoundLocation = "Errado.wav";
+                    som.Play();
                 }
                 else
                 {
@@ -171,6 +176,7 @@ namespace WindowsFormsApplication1
         {
             public string nome;
             public string num;
+            public Image img;
             public Atributos atr;
         }
         struct Atributos
@@ -185,6 +191,7 @@ namespace WindowsFormsApplication1
             Carta dino1 = new Carta();
             dino1.nome = "Herrerassauro";
             dino1.num = "1A";
+            dino1.img = Properties.Resources.Dino1A;
             dino1.atr.altura = 1.5f;
             dino1.atr.comprimento = 4.5f;
             dino1.atr.peso = 300;
@@ -193,6 +200,7 @@ namespace WindowsFormsApplication1
             Carta dino2 = new Carta();
             dino2.nome = "Procompsognato";
             dino2.num = "1B";
+            dino2.img = Properties.Resources.Dino1B;
             dino2.atr.altura = 0.3f;
             dino2.atr.comprimento = 1.2f;
             dino2.atr.peso = 1;
@@ -201,6 +209,7 @@ namespace WindowsFormsApplication1
             Carta dino3 = new Carta();
             dino3.nome = "Patagossauro";
             dino3.num = "1C";
+            dino3.img = Properties.Resources.Dino1C;
             dino3.atr.altura = 8f;
             dino3.atr.comprimento = 18f;
             dino3.atr.peso = 16000;
@@ -209,6 +218,7 @@ namespace WindowsFormsApplication1
             Carta dino4 = new Carta();
             dino4.nome = "Ceratossauro";
             dino4.num = "1D";
+            dino4.img = Properties.Resources.Dino1D;
             dino4.atr.altura = 2f;
             dino4.atr.comprimento = 6f;
             dino4.atr.peso = 1000;
@@ -217,6 +227,7 @@ namespace WindowsFormsApplication1
             Carta dino5 = new Carta();
             dino5.nome = "Pterodáctilo";
             dino5.num = "2A";
+            dino5.img = Properties.Resources.Dino2A;
             dino5.atr.altura = 0.5f;
             dino5.atr.comprimento = 1f;
             dino5.atr.peso = 1;
@@ -225,6 +236,7 @@ namespace WindowsFormsApplication1
             Carta dino6 = new Carta();
             dino6.nome = "Velociraptor";
             dino6.num = "2B";
+            dino6.img = Properties.Resources.Dino2B;
             dino6.atr.altura = 1f;
             dino6.atr.comprimento = 1.8f;
             dino6.atr.peso = 15;
@@ -233,6 +245,7 @@ namespace WindowsFormsApplication1
             Carta dino7 = new Carta();
             dino7.nome = "Triceratopo";
             dino7.num = "2C";
+            dino7.img = Properties.Resources.Dino2C;
             dino7.atr.altura = 6f;
             dino7.atr.comprimento = 9f;
             dino7.atr.peso = 6000;
@@ -241,6 +254,7 @@ namespace WindowsFormsApplication1
             Carta dino8 = new Carta();
             dino8.nome = "Baptornis";
             dino8.num = "2D";
+            dino8.img = Properties.Resources.Dino2D;
             dino8.atr.altura = 0.8f;
             dino8.atr.comprimento = 1f;
             dino8.atr.peso = 7;
@@ -266,6 +280,7 @@ namespace WindowsFormsApplication1
             {
                 lbl_qntCartas.Text = "Nº de cartas: " + qntCartas;
                 lbl_MyTitle.Text = carta[0].num + " " + carta[0].nome.ToUpper();
+                picture1.BackgroundImage = carta[0].img;
                 lbl_MyAtr.Text = "Altura (m): " + carta[0].atr.altura + "\n\nComprimento (m): " + carta[0].atr.comprimento + "\n\nPeso (Kg): " + carta[0].atr.peso + "\n\nViveu há (10^6 anos): " + carta[0].atr.idade + "\n";
             }
             else
@@ -273,6 +288,8 @@ namespace WindowsFormsApplication1
                 lbl_Interrogacao.Text = "";
                 lbl_qntCartasOponente.Text = "Nº de cartas: " + qntCartasOponente;
                 lbl_otherTitle.Text = carta[0].num + " " + carta[0].nome.ToUpper();
+                picture2.Visible = true;
+                picture2.BackgroundImage = carta[0].img;
                 lbl_otherAtr.Text = "Altura (m): " + carta[0].atr.altura + "\n\nComprimento (m): " + carta[0].atr.comprimento + "\n\nPeso (Kg): " + carta[0].atr.peso + "\n\nViveu há (10^6 anos): " + carta[0].atr.idade + "\n";
             }
 
@@ -285,6 +302,7 @@ namespace WindowsFormsApplication1
             lbl_otherTitle.Text = "";
             lbl_otherAtr.Text = "";
             lbl_Interrogacao.Text = "?";
+            picture2.Visible = false;
         }
 
         // embaralha as cartas

@@ -26,3 +26,13 @@ E:\Estudos\C#\Trunfo Form\WindowsFormsApplication1\WindowsFormsApplication1\obj\
 E:\Estudos\C#\Trunfo Form\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
 E:\Estudos\C#\Trunfo Form\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 E:\Estudos\C#\Trunfo Form\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+F:\Estudos\C#\Git Trunfo\trunfo-google-form\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+F:\Estudos\C#\Git Trunfo\trunfo-google-form\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+F:\Estudos\C#\Git Trunfo\trunfo-google-form\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+F:\Estudos\C#\Git Trunfo\trunfo-google-form\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+F:\Estudos\C#\Git Trunfo\trunfo-google-form\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+F:\Estudos\C#\Git Trunfo\trunfo-google-form\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+F:\Estudos\C#\Git Trunfo\trunfo-google-form\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+F:\Estudos\C#\Git Trunfo\trunfo-google-form\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CoreCompileInputs.cache
+F:\Estudos\C#\Git Trunfo\trunfo-google-form\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+F:\Estudos\C#\Git Trunfo\trunfo-google-form\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
